@@ -1,7 +1,7 @@
 package com.dancarlyon.togglemod.proxy;
 
 
-public class ServerProxy
+public class ServerProxy extends CommonProxy
 {
 
 }

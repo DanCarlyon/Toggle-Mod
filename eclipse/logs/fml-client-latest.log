@@ -1147,3 +1147,7 @@
 [14:01:16] [Client thread/DEBUG] [Forge Mod Loader/]: Mod Forge Mod Loader is missing a pack.mcmeta file, substituting a dummy one
 [14:01:16] [Client thread/DEBUG] [Minecraft Forge/]: Mod Minecraft Forge is missing a pack.mcmeta file, substituting a dummy one
 [14:01:16] [Client thread/DEBUG] [Toggle Mod/]: Mod Toggle Mod is missing a pack.mcmeta file, substituting a dummy one
+[21:47:23] [Client thread/INFO] [STDOUT/]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[21:47:23] [Client thread/INFO] [STDOUT/]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
+[21:47:24] [Client thread/INFO] [STDOUT/]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
+[21:47:24] [Client thread/INFO] [STDOUT/]: [paulscode.sound.SoundSystemLogger:message:69]: 

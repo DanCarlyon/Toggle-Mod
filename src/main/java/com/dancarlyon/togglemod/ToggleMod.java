@@ -1,6 +1,8 @@
 package com.dancarlyon.togglemod;
 
+import com.dancarlyon.togglemod.proxy.IProxy;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.relauncher.Side;
@@ -27,6 +29,8 @@ public class ToggleMod
         static boolean notifyStatus = false;
     }
 
+    @SidedProxy(clientSide = "com.dancarlyon.togglemod.proxy.ClientProxy", serverSide = "com.dancarlyon.togglemod.proxy.ServerProxy")
+    public static IProxy proxy;
 
 
     @Mod.EventHandler
@@ -37,23 +41,14 @@ public class ToggleMod
 
         config.load();
         Config.toggleLeftEnabled = config.get("general", "ToggleLeft", true).getBoolean(false);
-
         Config.toggleRightEnabled = config.get("general", "ToggleRight", true).getBoolean(false);
-
         Config.toggleSneakEnabled = config.get("general", "ToggleSneak", true).getBoolean(false);
-
         Config.toggleRunEnabled = config.get("general", "ToggleRun", true).getBoolean(false);
-
         Config.toggleSprintEnabled = config.get("general", "ToggleSprint", true).getBoolean(false);
-
         Config.toggleJumpEnabled = config.get("general", "ToggleJump", true).getBoolean(false);
-
         Config.holdToAttackEnabled = config.get("general", "HoldToAttack", true).getBoolean(false);
-
         Config.autoOnlyAttackEnabled = config.get("general", "AutoOnlyAttack", true).getBoolean(false);
-
         Config.notifyStatus = config.get("general", "NotifyStatus", false).getBoolean(false);
-
         config.save();
     }
 
@@ -64,6 +59,7 @@ public class ToggleMod
 
 
     }
+
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
